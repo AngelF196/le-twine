@@ -7,10 +7,20 @@ le_twine
   "ifid": "EFF0AE82-3F20-4FC1-8FFE-8312BC541B96",
   "format": "Harlowe",
   "format-version": "3.3.9",
-  "start": "Untitled Passage",
+  "start": "Monte choice",
   "zoom": 1
 }
 
 
-:: Untitled Passage {"position":"675,250","size":"100,100"}
-pee
+:: Christo {"position":"900,200","size":"100,100"}
+
+
+
+:: Monte {"position":"900,400","size":"100,100"}
+
+
+
+:: Monte choice {"position":"700,300","size":"100,100"}
+we
+
+j'aime le comte de Monte Cristo, do you choose [[Monte]] or [[Christo]]
