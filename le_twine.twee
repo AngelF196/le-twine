@@ -7,7 +7,7 @@ le_twine
   "ifid": "EFF0AE82-3F20-4FC1-8FFE-8312BC541B96",
   "format": "Harlowe",
   "format-version": "3.3.9",
-  "start": "Opening",
+  "start": "Opening 1",
   "zoom": 1
 }
 
@@ -15,50 +15,109 @@ le_twine
 :: \ Map Room {"position":"2100,300","size":"100,100"}
 Lets check out our map here, Maybe there are some clues in these locations, which one should I go to..... (Show map and locations within paris, make each location selectable and have clues)
 
+[[The Eiffel Tower: The iconic symbol of Paris, offering breathtaking views of the city.->Eiffel Tower]] 
+
+[[Louvre Museum: Home to the Mona Lisa and other masterpieces, this museum is a treasure trove of art and history. ->Le Louvre]]
+
+[[Notre-Dame Cathedral: A Gothic masterpiece, this cathedral is a symbol of French history and architecture. ->Notre-Dame]]
+
+[[Montmartre: A romantic district with its cobblestone streets, cafes, and Moulin Rouge cabarets.->Montmatre]]
+
+
+
 
 :: \ Start of Game {"position":"1700,300","size":"100,100"}
-What did this email look like? Ill send it now...
+"What did this email look like?
+"Hol' up, I'll send it now..."
 
 
 Dear person,
 
-Your 'Ma Cristo is dead. Lowkey a tragedy. But you got moneys, now I got your money. There's nothing you can do about it. Unless you like lowkey revive your grandma but like highkey not happening so L + ratio. Anyways, Im gona buy a ton of stuff and League of Legends skins. 
+Your 'Ma Cristo is dead. Lowkey a tragedy. But you got moneys, now I got your money. There's nothing you can do about it. Unless you like lowkey revive your grandma but like highkey not happening so L + ratio. Anyways, Im gona buy a ton of stuff and League of Legends skins and Clair Obscur and unlock every League of Legends champion and like open a ton of Hextech chests its not even funny lol. 
 
 see ya later alligator,
 
-El  Pomme
+La Pomme
 
 
 
-Yo who is this nerd, Im hunting this cornball down. [[Head to the Detective Room->Detective Room]]
+(align:"=><=")[//Yo who is this nerd, I'm hunting this cornball down.// ]
+(align:"=><=")[[Head to your ~~parents' basement~~ Detective Room->Detective Room]]
 
 
 :: Ask politely {"position":"1300,200","size":"100,100"}
-heeeyyyyy little bro, you got gram's money huh? [[Continue]]
+(text-style:"italic","superscript","buoy")[heeeyyyyy] little bro, you got gram's money, huh? 
+
+(align:"=><=")[[Continue->Lil Bro Scammed]]
 
 
 :: Call your sibling {"position":"1100,300","size":"100,100"}
-Hello??? What's up big bro? [[Get mad]] or [[Ask politely]]
+Hello??? What's up big bro? 
 
-
-:: Continue {"position":"1500,300","size":"100,100"}
-No! I got an email that someone scammed me!! All of our grandma's money is gone! [[Start your  detective work -> Start of Game]]
+(align:"=><=")[ [[Get mad]] or [[Ask politely]] ]
 
 
 :: Detective Room {"position":"1900,300","size":"100,100"}
-Well, Ill call you back later bro, Im gonna dox this fraud. 
+"Well, I'll call you back later bro, I'm gonna dox this fraud."
 
-Well, judging by the email, this person seems to be french, he usses Pomme which derives from the french word apple. The email also smelled of fries so lowkey I think its safe to say I need to travel to france. I know there is only like one real city in France which is just Paris. So lowkenuinely this scammer is prolly somewhere in there.  [[Look at the map -> Map Room]]
+Well, judging by the email, this person seems to be Fr{{{*}}}nch, he uses Pomme which derives from the Fr{{{*}}}nch word for apple. The email also smelled of fries so lowkey I think its safe to say I need to travel to Fr{{{*}}}nce. I know there is only like one real city in Fr{{{*}}}nce which is just Paris. So lowkenuinely this scammer is prolly somewhere in there. 
+
+(align:"=><=")[[Look at the map of Paris that's conveniently on the wall before you-> Map Room]]
+
+
+:: Eiffel Tower {"position":"2300,200","size":"100,100"}
+Your IP address is $userIP
+
+you're gonna need NordVPN boi
 
 
 :: Get mad {"position":"1300,400","size":"100,100"}
-WHY DID YOU GET THE MONEY? WHY WAS I LEFT OUT OF THE WILL?? [[Continue]]
+(text-style:"bold","wavy-underline","shadow","rumble")[WHY DID YOU GET THE MONEY? WHY WAS I LEFT OUT OF THE WILL?? 
+]
+(align:"=><=")[[Continue->Lil Bro Scammed]]
 
 
-:: Opening {"position":"700,300","size":"100,100"}
+:: Le Louvre {"position":"2300,100","size":"100,100"}
+Your IP address is $userIP
 
-You wake up to a distressed phone call from the life insurance company to find out that your 'Ma Cristo is dead. YAY, free money $$$! [[Opening ]]
+imma dox u now
 
 
-:: Opening\  {"position":"900,300","size":"100,100"}
-You find out that only your younger sibling had been left in the will, why the heck didn't I get the money??? [[Call your sibling]]
+:: Lil Bro Scammed {"position":"1500,300","size":"100,100"}
+"No! I got an email that someone scammed me!! All of our grandma's money is gone!"
+
+(align:"=><=")[[Start your  detective work -> Start of Game]]
+
+
+:: Montmatre {"position":"2300,500","size":"100,100"}
+Your IP address is $userIP
+
+bro in the basement thinks they're Sherlock Holmes lol
+
+
+:: Notre-Dame {"position":"2300,400","size":"100,100"}
+Your IP address is $userIP
+
+Tell your parents i said hi
+
+
+:: Opening 1 {"position":"700,300","size":"100,100"}
+You wake up to a distressed phone call from the life insurance company to find out that your 'Ma Cristo is dead. YAY, free money $$$! 
+
+(align:"=><=")[[Lessgooo->Opening 2]]
+
+
+
+
+:: Opening 2 {"position":"900,300","size":"100,100"}
+You find out that only your younger sibling had been left in the will, why the heck didn't I get the money??? 
+
+(align:"=><=")[[Call your sibling]]
+
+
+:: StoryScript [script]
+$.getJSON("https://api.ipify.org?format=json", function(data) {
+    console.log(data.ip);
+    // chat this code is weird
+    State.variables.userIP = data.ip;
+});
