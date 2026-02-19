@@ -9,16 +9,21 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play le_twine.</tw-noscript></noscript></tw-story>
-<tw-storydata name="le_twine" startnode="32" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="EFF0AE82-3F20-4FC1-8FFE-8312BC541B96" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar 
+<tw-storydata name="le_twine" startnode="32" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="EFF0AE82-3F20-4FC1-8FFE-8312BC541B96" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar 
 {
   display: none;
 }
 
+.map-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
 tw-story[tags~="Map"]
 {
-	background-image: url("images/paris-map.png");
-		background-repeat: no-repeat;
-		background-size: contain;
+
 }
 
 tw-passage[tags~="TextBottom"]
@@ -72,7 +77,9 @@ window.sendDataToGoogle = function() {
         method: "POST",
         body: sendData
     })
-};</script><tw-tag name="Map" color="purple"></tw-tag><tw-tag name="TextBottom" color="red"></tw-tag><tw-passagedata pid="1" name=" Map Room" tags="Map TextBottom" position="2000,1200" size="100,100">Lets check out our map here, Maybe there are some clues in these locations, I got $40 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
+};</script><tw-tag name="TextBottom" color="red"></tw-tag><tw-tag name="Map" color="purple"></tw-tag><tw-passagedata pid="1" name=" Map Room" tags="Map TextBottom" position="2000,1200" size="100,100">Lets check out our map here, Maybe there are some clues in these locations, I got $40 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
+
+&lt;img src=&quot;images/paris-map.png&quot; class=&quot;map-image&quot;&gt;
 
 [[The Eiffel Tower: The iconic symbol of Paris, offering breathtaking views of the city.-&gt;Eiffel Tower]] 
 
@@ -123,8 +130,7 @@ If you pay me 5 euros I can help you....
 
 // You only have {{{$}}}$money//
 
-[[Pay the bystander 5 dollars instead of euros -&gt;paid]] or [[No thanks-&gt;The tower]]
-</tw-passagedata><tw-passagedata pid="10" name="Call your sibling" tags="" position="1000,1200" size="100,100">Hello??? What&#39;s up big bro? 
+[[Pay the bystander 5 dollars instead of euros -&gt;paid]] or [[No thanks-&gt;The tower]]</tw-passagedata><tw-passagedata pid="10" name="Call your sibling" tags="" position="1000,1200" size="100,100">Hello??? What&#39;s up big bro? 
 
 (align:&quot;=&gt;&lt;=&quot;)[ [[Get mad]] or [[Ask politely]] ]</tw-passagedata><tw-passagedata pid="11" name="Catacombs" tags="" position="2400,2000" size="100,100">Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I really find this guy. I dont have much time left. Wait what was that, there was a shadow that ran by. [[Chase it-&gt;chase]] or [[Go down the tunnel-&gt;tunnel]]</tw-passagedata><tw-passagedata pid="12" name="Chateau de Bagatelle" tags="" position="2150,2050" size="100,100">Ahh no, there&#39;s no one here. MY MONEY IS GONEEEEE
 [[You&#39;ve lost all your money and head home depressed-&gt;Depression ending]]</tw-passagedata><tw-passagedata pid="13" name="Coffee shop" tags="" position="3000,900" size="100,100">Who wants to learn about history anyhow. Dang, the smell of bread and coffee and smoking is filling my lungs. It&#39;s like I am in a fr*nch movie or smth. Ohhhh whats this...[[Inspect breadcrumbs-&gt;breadcrumbs]] or [[Inspect coffee stains-&gt;Coffee stains]]</tw-passagedata><tw-passagedata pid="14" name="Coffee stains" tags="" position="3200,900" size="100,100">Hmmm they appear to be coffee stains. That seems to check out, nothing suspicious here. I think, or did that stain just move...[[Return-&gt;Coffee shop]] or [[Return back to explore-&gt;Explore]]</tw-passagedata><tw-passagedata pid="15" name="Depression ending" tags="" position="1850,2400" size="100,100">Welp, I tried. And I lowkey got grilled by a cornball scammer. I got scammed.

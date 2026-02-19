@@ -9,15 +9,17 @@ le_twine
   "format-version": "3.3.9",
   "start": "Opening 1",
   "tag-colors": {
-    "Map": "purple",
-    "TextBottom": "red"
+    "TextBottom": "red",
+    "Map": "purple"
   },
-  "zoom": 1
+  "zoom": 0.6
 }
 
 
 :: \ Map Room [Map TextBottom] {"position":"2000,1200","size":"100,100"}
 Lets check out our map here, Maybe there are some clues in these locations, I got $40 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
+
+<img src="images/paris-map.png" class="map-image">
 
 [[The Eiffel Tower: The iconic symbol of Paris, offering breathtaking views of the city.->Eiffel Tower]] 
 
@@ -101,7 +103,6 @@ If you pay me 5 euros I can help you....
 // You only have {{{$}}}$money//
 
 [[Pay the bystander 5 dollars instead of euros ->paid]] or [[No thanks->The tower]]
-
 
 
 :: Call your sibling {"position":"1000,1200","size":"100,100"}
@@ -514,11 +515,16 @@ tw-sidebar
   display: none;
 }
 
+.map-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
 tw-story[tags~="Map"]
 {
-	background-image: url("images/paris-map.png");
-		background-repeat: no-repeat;
-		background-size: contain;
+
 }
 
 tw-passage[tags~="TextBottom"]
