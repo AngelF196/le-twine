@@ -17,7 +17,9 @@ le_twine
 
 
 :: \ Map Room [Map TextBottom] {"position":"2000,1200","size":"100,100"}
-Lets check out our map here, Maybe there are some clues in these locations, I got $40 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
+(if:visits < 3)[
+
+Lets check out our map here, Maybe there are some clues in these locations, I got {{{$}}}$money dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
 
 <img src="images/paris-map.png" class="map-image">
 
@@ -25,20 +27,26 @@ Lets check out our map here, Maybe there are some clues in these locations, I go
 
 [[Louvre Museum: Home to the Mona Lisa and other masterpieces, this museum is a treasure trove of art and history. ->Le Louvre]]
 
-[[Notre-Dame Cathedral: A Gothic masterpiece, this cathedral is a symbol of Fr*nch history and architecture. ->Notre-Dame]]
+[[Notre-Dame Cathedral: A Gothic masterpiece, this cathedral is a symbol of Fr{{{*}}}nch history and architecture. ->Notre-Dame]]
 
 [[Montmartre: A romantic district with its cobblestone streets, cafes, and Moulin Rouge cabarets.->Montmatre]]
+]
 
+(if:visits >= 3)[
 
-make the options and dialogue below visable after they have visited their two choices of places. 
 
 So, where is he hiding then? I only have one chance to catch him before my time has run out to save the money....
+
+<img src="images/paris-map.png" class="map-image">
 
 [[Mont Saint-Michel->Mont Saint-Michel]]
 [[Catacombs->Catacombs]]
 [[La Sainte-Chapelle->La Sainte-Chapelle]]
 [[Palace of Versailles->Palace of Versailles]]
 [[Chateau de Bagatelle->Chateau de Bagatelle]]
+
+]
+
 
 
 :: \ Mont Clue {"position":"3200,1000","size":"100,100"}
@@ -115,13 +123,19 @@ Hello??? What's up big bro?
 Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I really find this guy. I dont have much time left. Wait what was that, there was a shadow that ran by. [[Chase it->chase]] or [[Go down the tunnel->tunnel]]
 
 
+(set: $finalLocation to "Catacombs")
+
+
 :: Chateau de Bagatelle {"position":"2150,2050","size":"100,100"}
 Ahh no, there's no one here. MY MONEY IS GONEEEEE
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
+(set: $finalLocation to "Chateau")
+
+
 :: Coffee shop {"position":"3000,900","size":"100,100"}
-Who wants to learn about history anyhow. Dang, the smell of bread and coffee and smoking is filling my lungs. It's like I am in a fr*nch movie or smth. Ohhhh whats this...[[Inspect breadcrumbs->breadcrumbs]] or [[Inspect coffee stains->Coffee stains]]
+Who wants to learn about history anyhow. Dang, the smell of bread and coffee and smoking is filling my lungs. It's like I am in a Fr{{{*}}}nch movie or smth. Ohhhh whats this...[[Inspect breadcrumbs->breadcrumbs]] or [[Inspect coffee stains->Coffee stains]]
 
 
 :: Coffee stains {"position":"3200,900","size":"100,100"}
@@ -155,6 +169,16 @@ Well, judging by the email, this person seems to be Fr{{{*}}}nch, he uses Pomme 
 The famous Eiffel Tower, surely I will find something here, everybody knows this place so he prolly went here. ohhh a dark and mysterious alley do I enter it? [[Enter the alley ->Alley]] 
 
 Maybe I can find something in the tower? [[Head to the Tower->The tower]]
+
+(if:$investigationCount is 0)[
+(set: $firstLocation to "EiffelTower")
+(set: $investigationCount to $investigationCount + 1)
+]
+(else-if: $investigationCount is 1)[
+(set: $secondLocation to "EiffelTower")
+(set: $investigationCount to $investigationCount + 1)
+]
+
 
 
 :: Explore {"position":"2800,900","size":"100,100"}
@@ -203,9 +227,22 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
+(set: $finalLocation to "SainteChapelle")
+
+
 :: Le Louvre {"position":"2475,525","size":"100,100"}
-Hmmm I wonder where this loser could be... Wait, whats that? 
+Hmmm I wonder where this loser could be... Wait, what's that? 
 [[Inspect a sign-> Sign]]
+
+(if:$investigationCount is 0)[
+(set: $firstLocation to "Louvre")
+(set: $investigationCount to $investigationCount + 1)
+]
+(else-if: $investigationCount is 1)[
+(set: $secondLocation to "Louvre")
+(set: $investigationCount to $investigationCount + 1)
+]
+
 
 
 :: Lil Bro Scammed {"position":"1400,1200","size":"100,100"}
@@ -219,10 +256,23 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
+(set: $finalLocation to "SaintMichel")
+
+
 :: Montmatre {"position":"2600,900","size":"100,100"}
 Ahh Montmatre... 
 
 The building known for it's artistic heritage or whatever that goofy ahh phrase means. Maybe I can find something here otherwise I am straight cooked. [[Explore the Montmarte->Explore]]
+
+(if:$investigationCount is 0)[
+(set: $firstLocation to "Montmatre")
+(set: $investigationCount to $investigationCount + 1)
+]
+(else-if: $investigationCount is 1)[
+(set: $secondLocation to "Montmatre")
+(set: $investigationCount to $investigationCount + 1)
+]
+
 
 
 :: Muffin line {"position":"2925,1625","size":"100,100"}
@@ -254,6 +304,16 @@ But out of absolutely nowhere, you hear some lowkey gas singing about life insur
 
 (align:"=><=")[[[Maybe this place is worth looking into after all->inside]]]
 
+(if:$investigationCount is 0)[
+(set: $firstLocation to "NotreDame")
+(set: $investigationCount to $investigationCount + 1)
+]
+(else-if: $investigationCount is 1)[
+(set: $secondLocation to "NotreDame")
+(set: $investigationCount to $investigationCount + 1)
+]
+
+
 
 :: Opening 1 {"position":"600,1200","size":"100,100"}
 You wake up to a distressed phone call from the life insurance company to find out that your 'Ma Cristo is dead. YAY, free money $$$! 
@@ -261,6 +321,11 @@ You wake up to a distressed phone call from the life insurance company to find o
 (align:"=><=")[[Lessgooo->Opening 2]]
 
 (set: $money to 40)
+
+(set: $investigationCount to 0)
+(set: $firstLocation to "NA")
+(set: $secondLocation to "NA")
+(set: $finalLocation to "NA")
 
 
 :: Opening 2 {"position":"800,1200","size":"100,100"}
@@ -276,6 +341,9 @@ Woah whats this hug pyramid, maybe there is something in the water? [[Check the 
 :: Palace of Versailles {"position":"1950,2050","size":"100,100"}
 Ahh no, there's no one here. MY MONEY IS GONEEEEE
 [[You've lost all your money and head home depressed->Depression ending]]
+
+
+(set: $finalLocation to "Palace")
 
 
 :: Sculptures {"position":"3100,400","size":"100,100"}
@@ -337,9 +405,6 @@ ahhhheeeee ahhheeeeee. I can't breathe, I really shouldn't have skipped gym clas
 :: climb {"position":"2725,1425","size":"100,100"}
 Cmonnnnnn I can almost reach it, Im so closeeeeeeeeee. Maybe If I had something I could hit the paper and knock it down. What could I use tho. [[Use Baguette-> get clue]]
 
-
-
-(Note for joseph, make a bool that can check if they have grabbed the bagguette and make an option to use it in order to advance to getting the clue.)
 
 
 :: continue {"position":"3150,1700","size":"100,100"}
@@ -500,7 +565,10 @@ window.sendDataToGoogle = function() {
       "SessionID": sessionId, // session id is optional
       "PlayerName": harlowe.State.variables['playerName'], 
       "Score": harlowe.State.variables['score'],
-      "Ending": harlowe.State.variables['ending']
+      "Ending": harlowe.State.variables['ending'],
+    "FirstLocation": harlowe.State.variables['firstLocation'],
+    "SecondLocation": harlowe.State.variables['secondLocation'],
+    "FinalLocation": harlowe.State.variables['finalLocation']
       });
 
     fetch(googleSheetURL, {
