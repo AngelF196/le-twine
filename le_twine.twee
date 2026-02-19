@@ -8,7 +8,7 @@ le_twine
   "format": "Harlowe",
   "format-version": "3.3.9",
   "start": "Opening 1",
-  "zoom": 1
+  "zoom": 0.6
 }
 
 
@@ -29,14 +29,13 @@ only allow two places to be visited out of the 4.
 
 make the options and dialogue below visable after they have visited their two choices of places. 
 
-So, where is he hiding then, I only have one cance to catch him beofre my time has run out to save the money....
+So, where is he hiding then? I only have one chance to catch him before my time has run out to save the money....
 
 [[Mont Saint-Michel->Mont Saint-Michel]]
 [[Catacombs->Catacombs]]
 [[La Sainte-Chapelle->La Sainte-Chapelle]]
 [[Palace of Versailles->Palace of Versailles]]
 [[Chateau de Bagatelle->Chateau de Bagatelle]]
-
 
 
 :: \ Mont Clue {"position":"3200,1000","size":"100,100"}
@@ -127,7 +126,7 @@ Hmmm they appear to be coffee stains. That seems to check out, nothing suspiciou
 Welp, I tried. And I lowkey got grilled by a cornball scammer. I got scammed.
 
 
-The Depressing End. 
+The Depressing End.
 
 
 :: Detective Room {"position":"1800,1200","size":"100,100"}
@@ -145,7 +144,7 @@ Maybe I can find something in the tower? [[Head to the Tower->The tower]]
 
 
 :: Explore {"position":"2800,900","size":"100,100"}
-Ohh look at that, a nice little coffe shop. I wonder if they have some info on this guy or maybe I can go to a goofy historic building in this village. [[Head to the coffee shop->Coffee shop]] or [[Go to a historic building->hist building]]
+Ohh look at that, a nice little coffee shop. I wonder if they have some info on this guy or maybe I can go to a goofy historic building in this village. [[Head to the coffee shop->Coffee shop]] or [[Go to a historic building->hist building]]
 
 
 :: Get mad {"position":"1200,1300","size":"100,100"}
@@ -192,7 +191,7 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 
 :: Le Louvre {"position":"2475,525","size":"100,100"}
 Hmmm I wonder where this loser could be... Wait, whats that? 
-[[Inspect a sign-> Sign]] 
+[[Inspect a sign-> Sign]]
 
 
 :: Lil Bro Scammed {"position":"1400,1200","size":"100,100"}
@@ -268,7 +267,7 @@ Woahhh, the Venus de Milo. Isn't this like the goddess of love. Lowkey fiah. May
 
 
 :: The clue {"position":"3400,600","size":"100,100"}
-AHHHAA, I KNEW IT. SHE WAS STARING AT THIS CONVENIENTLY PLACED APPLE ORIGAMI. It says,"I see you have foiund the apple of her eye!..." This guy seriously needs a job. Well I guess this would be his job but like le bro bro, where is the A material. Anyways,"Now you should think, I amwhere many have perished and where many have not escaped, I am not over yet under and anyone inside me has sealed their fate." Why is this guy acting like he IS the place where he is hiding. BRO IS NOT THE RIDDLER. [[Return back to base (basement of your mom's house-> Map Room]]
+AHHHAA, I KNEW IT. SHE WAS STARING AT THIS CONVENIENTLY PLACED APPLE ORIGAMI. It says,"I see you have found the apple of her eye!..." This guy seriously needs a job. Well I guess this would be his job but like le bro bro, where is the A material. Anyways,"Now you should think, I am where many have perished and where many have not escaped, I am not over yet under and anyone inside me has sealed their fate." Why is this guy acting like he IS the place where he is hiding. BRO IS NOT THE RIDDLER. [[Return back to base -> Map Room]]
 
 
 :: The tower {"position":"2525,1525","size":"100,100"}
@@ -380,8 +379,17 @@ Wait how was that fair???
 It wasnt, scammer get scammed MWHAHAHAHA
 The Gambler End.
 
+(set: $playerName to "Vinnie")
+(set: $score to 0)
+(set: $ending to "Gambler")
 
-:: hear out {"position":"2200,2500","size":"100,100"}
+<script>
+sendDataToSheet($playerName, $score, $ending)
+</script>
+
+
+
+:: hear out {"position":"2200,2525","size":"100,100"}
 What if I told you we can make money together. 
 Bro you literally stole my granny money. 
 Truth nuke, Buuuuuuut Ill share, we can go 15-85%.
@@ -436,6 +444,20 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
     // chat this code is weird
     State.variables.userIP = data.ip;
 });
+
+window.sendDataToSheet = function(playerName, score, ending) {
+  fetch("https://script.google.com/macros/s/AKfycbzY6wCivRgEzHgQeN4fozd3MQvH6PVmz3vHiyA4GirdTnZtCAvyycNCeSzFXW8YtQ0XRA/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "playerName": playerName,
+      "score": score,
+      "ending": ending
+    })
+  });
+};
 
 :: StoryStylesheet [stylesheet]
 tw-sidebar 
