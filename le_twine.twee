@@ -8,12 +8,16 @@ le_twine
   "format": "Harlowe",
   "format-version": "3.3.9",
   "start": "Opening 1",
-  "zoom": 0.6
+  "tag-colors": {
+    "Map": "purple",
+    "TextBottom": "red"
+  },
+  "zoom": 1
 }
 
 
-:: \ Map Room {"position":"2000,1200","size":"100,100"}
-Lets check out our map here, Maybe there are some clues in these locations, I got $30 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places but which ones should I go to...
+:: \ Map Room [Map TextBottom] {"position":"2000,1200","size":"100,100"}
+Lets check out our map here, Maybe there are some clues in these locations, I got $40 dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
 
 [[The Eiffel Tower: The iconic symbol of Paris, offering breathtaking views of the city.->Eiffel Tower]] 
 
@@ -23,9 +27,6 @@ Lets check out our map here, Maybe there are some clues in these locations, I go
 
 [[Montmartre: A romantic district with its cobblestone streets, cafes, and Moulin Rouge cabarets.->Montmatre]]
 
-
-Note for joseph to add the 50 dollars above as a variable to keep track .
-only allow two places to be visited out of the 4.
 
 make the options and dialogue below visable after they have visited their two choices of places. 
 
@@ -40,6 +41,8 @@ So, where is he hiding then? I only have one chance to catch him before my time 
 
 :: \ Mont Clue {"position":"3200,1000","size":"100,100"}
 Welp, minus a million dollars. But hey, I get to learn about a dark mystery of paris. This sign says here," A dark, evil, spooky and terrifying place no one dares enter in paris, too many souls in one place." What kinda metaphor is hat! Is shakespeare really dead ahh sign. Whatever, [[Return to Map Room-> Map Room]]
+
+(set: $money to $money - 20)
 
 
 :: \ Sign {"position":"2700,500","size":"100,100"}
@@ -89,14 +92,16 @@ Jarvis....Analysis..... That would've been cool if I actually had one. [[Head ba
 (align:"=><=")[[Continue->Lil Bro Scammed]]
 
 
-:: Bystander call {"position":"2725,1525","size":"100,100"}
+:: Bystander call {"position":"2750,1550","size":"100,100"}
 Help!! Can anyone help? 
 Yeah I got you, whats up?
 I need help to grab that paper.
-If you pay me 5 dollars I can help you....
-[[Pay the bystander 5 dollars ->paid]] or [[No thanks->The tower]]
+If you pay me 5 euros I can help you....
 
-Note for joseph make them lose 5 dollars
+// You only have {{{$}}}$money//
+
+[[Pay the bystander 5 dollars instead of euros ->paid]] or [[No thanks->The tower]]
+
 
 
 :: Call your sibling {"position":"1000,1200","size":"100,100"}
@@ -128,6 +133,14 @@ Welp, I tried. And I lowkey got grilled by a cornball scammer. I got scammed.
 
 The Depressing End.
 
+(set: $playerName to "John")
+(set: $score to -1)
+(set: $ending to "Depression")
+
+<script>
+window.sendDataToGoogle()
+</script>
+
 
 :: Detective Room {"position":"1800,1200","size":"100,100"}
 "Well, I'll call you back later bro, I'm gonna dox this fraud."
@@ -137,7 +150,7 @@ Well, judging by the email, this person seems to be Fr{{{*}}}nch, he uses Pomme 
 (align:"=><=")[[Look at the map of Paris that's conveniently on the wall before you-> Map Room]]
 
 
-:: Eiffel Tower {"position":"2375,1400","size":"100,100"}
+:: Eiffel Tower {"position":"2375,1375","size":"100,100"}
 The famous Eiffel Tower, surely I will find something here, everybody knows this place so he prolly went here. ohhh a dark and mysterious alley do I enter it? [[Enter the alley ->Alley]] 
 
 Maybe I can find something in the tower? [[Head to the Tower->The tower]]
@@ -212,7 +225,7 @@ The building known for it's artistic heritage or whatever that goofy ahh phrase 
 
 
 :: Muffin line {"position":"2925,1625","size":"100,100"}
-No I dont, I am fr*nch. But here is a couple of breadcrumbs. [[Return back to the Eiffel Tower->Eiffel Tower]]
+No I dont, I am Fr{{{*}}}nch. But here is a couple of breadcrumbs. [[Return back to the Eiffel Tower->Eiffel Tower]]
 
 
 :: Museum {"position":"2900,400","size":"100,100"}
@@ -246,6 +259,8 @@ You wake up to a distressed phone call from the life insurance company to find o
 
 (align:"=><=")[[Lessgooo->Opening 2]]
 
+(set: $money to 40)
+
 
 :: Opening 2 {"position":"800,1200","size":"100,100"}
 You find out that only your younger sibling had been left in the will, why the heck didn't I get the money??? 
@@ -270,7 +285,7 @@ Woahhh, the Venus de Milo. Isn't this like the goddess of love. Lowkey fiah. May
 AHHHAA, I KNEW IT. SHE WAS STARING AT THIS CONVENIENTLY PLACED APPLE ORIGAMI. It says,"I see you have found the apple of her eye!..." This guy seriously needs a job. Well I guess this would be his job but like le bro bro, where is the A material. Anyways,"Now you should think, I am where many have perished and where many have not escaped, I am not over yet under and anyone inside me has sealed their fate." Why is this guy acting like he IS the place where he is hiding. BRO IS NOT THE RIDDLER. [[Return back to base -> Map Room]]
 
 
-:: The tower {"position":"2525,1525","size":"100,100"}
+:: The tower {"position":"2550,1500","size":"100,100"}
 Woah this thing is huge, wait is that a piece of paper in the metal bars? [[Climb it the goofy ahh tower->climb]] maybe I should call for help? [[Call for help from a bystander->Bystander call]]
 
 
@@ -326,7 +341,7 @@ Cmonnnnnn I can almost reach it, Im so closeeeeeeeeee. Maybe If I had something 
 (Note for joseph, make a bool that can check if they have grabbed the bagguette and make an option to use it in order to advance to getting the clue.)
 
 
-:: continue {"position":"3125,1725","size":"100,100"}
+:: continue {"position":"3150,1700","size":"100,100"}
 Nope, Never heard of em. [[Return to Eiffel Tower ->Eiffel Tower]]
 
 
@@ -384,9 +399,8 @@ The Gambler End.
 (set: $ending to "Gambler")
 
 <script>
-sendDataToSheet($playerName, $score, $ending)
+window.sendDataToGoogle()
 </script>
-
 
 
 :: hear out {"position":"2200,2525","size":"100,100"}
@@ -398,23 +412,28 @@ Truth nuke, Buuuuuuut Ill share, we can go 15-85%.
 
 
 :: hist building {"position":"3000,1000","size":"100,100"}
-Ahhh it'll do me good to learn a thing or two. Wait, I have to pay to enter, is this even worth it? [[Pay 20 dollars -> Mont Clue]] or [[Leave->Explore]]
+Ahhh it'll do me good to learn a thing or two. Wait, I have to pay to enter, is this even 
+
+// You have {{{$}}}$money//
+worth it? [[Pay 20 dollars, not those gross euros -> Mont Clue]] or [[Leave->Explore]]
 
 
 :: inside {"position":"3400,1200","size":"100,100"}
 Woahhh its so peak in here. I wonder if I can here myself echo. [[Yell at the top of your lungs->yelled]] or [[don't yell add visit the alter->Alter]]
 
 
-:: paid {"position":"2900,1500","size":"100,100"}
+:: paid {"position":"2950,1500","size":"100,100"}
 If you search around the area, you can find a useful tool to get the paper out.
 [[Return to the main area->Eiffel Tower]]
+
+(set: $money to $money - 5)
 
 
 :: paintings {"position":"3200,600","size":"100,100"}
 Ah yes of course, the Mona Lisa. I dont like the way she staring at me. Lowkey a creep (radiohead moment) but maybe she is hiding something. I wonder where she is looking...[[Turn to look at what she is looking at->The clue]]
 
 
-:: scammer line {"position":"2925,1725","size":"100,100"}
+:: scammer line {"position":"2925,1750","size":"100,100"}
 Yeah I dont really uhhhh, not really sure to be honest, are you talking about me knowing a guy who knows a guy who knows a second cousin who has a cross cousin named Pomme?
 [[yes!->continue]]
 
@@ -445,7 +464,7 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
     State.variables.userIP = data.ip;
 });
 
-window.sendDataToSheet = function(playerName, score, ending) {
+/* window.sendDataToSheet = function(playerName, score, ending) {
   fetch("https://script.google.com/macros/s/AKfycbzY6wCivRgEzHgQeN4fozd3MQvH6PVmz3vHiyA4GirdTnZtCAvyycNCeSzFXW8YtQ0XRA/exec", {
     method: "POST",
     headers: {
@@ -457,10 +476,52 @@ window.sendDataToSheet = function(playerName, score, ending) {
       "ending": ending
     })
   });
+}; 
+
+*/
+
+
+if (!window.harlowe){
+    window.harlowe = {"State": State};
+}
+
+// Paste your Google Web App URL here
+const googleSheetURL = "https://script.google.com/macros/s/AKfycbxqj3mfROqdl0qJsKxOuH1_A3Jiul0ywVOs9U37vsVEWLKB9PhmxEPX3RqBOrpWdBnO1A/exec";
+
+// creates a uuid for each session
+const sessionId = Date.now().toString(36) + Math.random().toString(36).substr(2);
+
+// call this in script whenever you want to save the data
+window.sendDataToGoogle = function() {
+  // put the name of the variable in the square brackets
+  // and the respective name in the google sheet at the start
+  var sendData = JSON.stringify({
+      "SessionID": sessionId, // session id is optional
+      "PlayerName": harlowe.State.variables['playerName'], 
+      "Score": harlowe.State.variables['score'],
+      "Ending": harlowe.State.variables['ending']
+      });
+
+    fetch(googleSheetURL, {
+        method: "POST",
+        body: sendData
+    })
 };
 
 :: StoryStylesheet [stylesheet]
 tw-sidebar 
 {
   display: none;
+}
+
+tw-story[tags~="Map"]
+{
+	background-image: url("images/paris-map.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+}
+
+tw-passage[tags~="TextBottom"]
+{
+  text-align: bottom;
 }
