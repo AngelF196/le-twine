@@ -120,7 +120,11 @@ Hello??? What's up big bro?
 
 
 :: Catacombs {"position":"2400,2000","size":"100,100"}
-Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I really find this guy. I dont have much time left. Wait what was that, there was a shadow that ran by. [[Chase it->chase]] or [[Go down the tunnel->tunnel]]
+Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I really find this guy. I dont have much time left. Wait what was that, there was a shadow that ran by.
+
+<img src="images/Catacombs.png" class="map-image">
+
+[[Chase it->chase]] or [[Go down the tunnel->tunnel]]
 
 
 (set: $finalLocation to "Catacombs")
