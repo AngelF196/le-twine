@@ -48,7 +48,6 @@ So, where is he hiding then? I only have one chance to catch him before my time 
 ]
 
 
-
 :: \ Mont Clue {"position":"3200,1000","size":"100,100"}
 Welp, minus a million dollars. But hey, I get to learn about a dark mystery of paris. This sign says here," A dark, evil, spooky and terrifying place no one dares enter in paris, too many souls in one place." What kinda metaphor is hat! Is shakespeare really dead ahh sign. Whatever, [[Return to Map Room-> Map Room]]
 
@@ -184,7 +183,6 @@ Maybe I can find something in the tower? [[Head to the Tower->The tower]]
 ]
 
 
-
 :: Explore {"position":"2800,900","size":"100,100"}
 Ohh look at that, a nice little coffee shop. I wonder if they have some info on this guy or maybe I can go to a goofy historic building in this village. [[Head to the coffee shop->Coffee shop]] or [[Go to a historic building->hist building]]
 
@@ -248,7 +246,6 @@ Hmmm I wonder where this loser could be... Wait, what's that?
 ]
 
 
-
 :: Lil Bro Scammed {"position":"1400,1200","size":"100,100"}
 "No! I got an email that someone scammed me!! All of our grandma's money is gone!"
 
@@ -278,7 +275,6 @@ The building known for it's artistic heritage or whatever that goofy ahh phrase 
 ]
 
 
-
 :: Muffin line {"position":"2925,1625","size":"100,100"}
 No I dont, I am Fr{{{*}}}nch. But here is a couple of breadcrumbs. [[Return back to the Eiffel Tower->Eiffel Tower]]
 
@@ -286,10 +282,6 @@ No I dont, I am Fr{{{*}}}nch. But here is a couple of breadcrumbs. [[Return back
 :: Museum {"position":"2900,400","size":"100,100"}
 Hmm. seems like I gotta pay for a ticket here. Minus 10 buckaroos. Apparently I only got a certain amount of time. I better be quick about this. 
 [[Check paintings->paintings]] [[Check scultpures->Sculptures]] [[Check outside->Outside Museum]]
-
-
-
-Note for joseph, minus 10 dollars and add a timer mechanic
 
 
 :: No {"position":"2725,1825","size":"100,100"}
@@ -316,7 +308,6 @@ But out of absolutely nowhere, you hear some lowkey gas singing about life insur
 (set: $secondLocation to "NotreDame")
 (set: $investigationCount to $investigationCount + 1)
 ]
-
 
 
 :: Opening 1 {"position":"600,1200","size":"100,100"}
@@ -408,7 +399,6 @@ ahhhheeeee ahhheeeeee. I can't breathe, I really shouldn't have skipped gym clas
 
 :: climb {"position":"2725,1425","size":"100,100"}
 Cmonnnnnn I can almost reach it, Im so closeeeeeeeeee. Maybe If I had something I could hit the paper and knock it down. What could I use tho. [[Use Baguette-> get clue]]
-
 
 
 :: continue {"position":"3150,1700","size":"100,100"}
@@ -513,7 +503,6 @@ Well, if you pay me 5 shmeckles, I will tell you a secret that you might find he
 
 [[Pay 5 shmeckles (15 dollars))->Hint]] or [[decline->declined offer]]
 
-Note Joseph take money away or check if they can even pay for it
 
 
 :: tunnel {"position":"2475,2150","size":"100,100"}
