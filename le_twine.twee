@@ -19,7 +19,7 @@ le_twine
 :: \ Map Room [Map TextBottom] {"position":"2000,1200","size":"100,100"}
 (if:visits < 3)[
 
-Lets check out our map here, Maybe there are some clues in these locations, I got {{{$}}}$money dollars. Just hopes and dreams. I Dont have time to visit everywhere,I can pick two places, but which ones should I go to... 🤔 🤔
+Lets check out our map here, Maybe there are some clues in these locations, you got {{{$}}}$money dollars along with your hopes and dreams. You don't have time to visit everywhere, pick two places, but choose carefully... 
 
 <img src="images/paris-map.png" class="map-image">
 
@@ -35,7 +35,7 @@ Lets check out our map here, Maybe there are some clues in these locations, I go
 (if:visits >= 3)[
 
 
-So, where is he hiding then? I only have one chance to catch him before my time has run out to save the money....
+So, where is he hiding then? You only have one chance to catch him before the money is gone forever...
 
 <img src="images/paris-map.png" class="map-image">
 
@@ -49,7 +49,11 @@ So, where is he hiding then? I only have one chance to catch him before my time 
 
 
 :: \ Mont Clue {"position":"3200,1000","size":"100,100"}
-Welp, minus a million dollars. But hey, I get to learn about a dark mystery of paris. This sign says here," A dark, evil, spooky and terrifying place no one dares enter in paris, too many souls in one place." What kinda metaphor is hat! Is shakespeare really dead ahh sign. Whatever, [[Return to Map Room-> Map Room]]
+Welp, minus a million dollars. But hey, you get to learn about a dark mystery of P{{{*}}}ris. This sign says here:
+"A dark, evil, spooky and terrifying place no one dares enter in Paris, too many souls in one place." 
+Hmm, they forgot to censor P{{{*}}}ris. And what kinda metaphor is that!? Pour one of for the homie Shakes A Spear... Whatever 
+
+[[Return to Map Room-> Map Room]]
 
 (set: $money to $money - 20)
 
@@ -78,34 +82,40 @@ La Pomme
 (align:"=><=")[[Head to your ~~parents' basement~~ Detective Room->Detective Room]]
 
 
-:: \ get clue {"position":"2900,1400","size":"100,100"}
-YES LESSGOOOO. Ohhhh whats this say..... For the best skilled scammer cannot be found, they hide in the dark with too much sound. (Shameless Plug-Pomme)
-This is the guy! What could this mean tho......hmmm, time to head back and think on this one [[Head back to the Map Room-> Map Room]]
+:: \ get clue {"position":"2925,1375","size":"100,100"}
+No seriously, you don't have any pockets, where'd the baguette come fr-
+
+Okay I'll just read the note. "For the best skilled scammer cannot be found, they hide in the dark with too much sound. (Shameless Plug-Pomme)"
+
+This is the guy, he writes like he took one poetry class that changed his life.
+[[Head back to the Map Room-> Map Room]]
 
 
 :: Alley {"position":"2525,1725","size":"100,100"}
-Hmm, this aint creepy at all. Hey, theres a guy over there maybe I should ask him if he knows any popular scammers? [[Yes]] or [[No]]
+Hmm, this aint creepy at all. Hey, theres a guy over there maybe you should ask him if he knows any popular scammers? 
+
+[[Yes]] or [[No]]
 
 
 :: Alter {"position":"3600,1300","size":"100,100"}
-Ohhh a book, ahh yes the holy.....wait, is that a picture of a man looking at himself in the mirror! I didn't know they had comics at chruch thats awesome. Wait, it has an apple in the bottom corner. THIS MUST BE THE GUY. 
+Oooh a book! Ah... yes... the holy.....wait, is that a picture of a man looking at himself in the mirror! I didn't know they had comics at church that's awesome. Wait, it has an apple in the bottom corner. THIS MUST BE THE GUY. The apple is being held by... a skeleton?
 
-But why at a church and why in the bible. This guy really is good at spreading his business I figure. Can't say im not impressed but what could this mean. And where is he located in this image..... very strange. 
+But why at a church and why in the bible? This guy really is good at spreading his business I figure. Can't say im not impressed but what could this mean. And where is he located in this image..... very strange. 
 
-Jarvis....Analysis..... That would've been cool if I actually had one. [[Head back to the map room-> Map Room]]
+[[Head back to the map room-> Map Room]]
 
 
 :: Ask politely {"position":"1200,1100","size":"100,100"}
-(text-style:"italic","superscript","buoy")[heeeyyyyy] little bro, you got gram's money, huh? 
+"(text-style:"italic","superscript","buoy")[heeeyyyyy] little bro, you got gram's money, huh?" 
 
 (align:"=><=")[[Continue->Lil Bro Scammed]]
 
 
 :: Bystander call {"position":"2750,1550","size":"100,100"}
-Help!! Can anyone help? 
-Yeah I got you, whats up?
-I need help to grab that paper.
-If you pay me 5 euros I can help you....
+You: "Help!! Can anyone help?" 
+Bystander: "Yeah I got you, whats up?"
+You: "I need help to grab that paper."
+Bystander: "If you pay me 5 euros I can help you...."
 
 // You only have {{{$}}}$money//
 
@@ -118,8 +128,8 @@ Hello??? What's up big bro?
 (align:"=><=")[ [[Get mad]] or [[Ask politely]] ]
 
 
-:: Catacombs {"position":"2400,2000","size":"100,100"}
-Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I really find this guy. I dont have much time left. Wait what was that, there was a shadow that ran by.
+:: Catacombs {"position":"2425,2000","size":"100,100"}
+Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope you find this guy, not much time left. Wait what was that? There was a shadow that ran by.
 
 <img src="images/Catacombs.png" class="map-image">
 
@@ -130,7 +140,8 @@ Oh shoot, its dark in here. And mysterious. Lowkey getting the spooks. I hope I 
 
 
 :: Chateau de Bagatelle {"position":"2150,2050","size":"100,100"}
-Ahh no, there's no one here. MY MONEY IS GONEEEEE
+You look around, search high and low, close and far, to and fro. But alas, the scammer is gone. And at this point, probably escaped with the stolen inheritance.
+
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
@@ -138,15 +149,17 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 
 
 :: Coffee shop {"position":"3000,900","size":"100,100"}
-Who wants to learn about history anyhow. Dang, the smell of bread and coffee and smoking is filling my lungs. It's like I am in a Fr{{{*}}}nch movie or smth. Ohhhh whats this...[[Inspect breadcrumbs->breadcrumbs]] or [[Inspect coffee stains->Coffee stains]]
+Who wants to learn about history anyways? Dang, the smell of bread and coffee and smoking is filling your lungs. It's like your in a Fr{{{*}}}nch movie like Ratatouille. Oh, what's this...? 
+[[Inspect breadcrumbs->breadcrumbs]] or [[Inspect coffee stains->Coffee stains]]
 
 
 :: Coffee stains {"position":"3200,900","size":"100,100"}
-Hmmm they appear to be coffee stains. That seems to check out, nothing suspicious here. I think, or did that stain just move...[[Return->Coffee shop]] or [[Return back to explore->Explore]]
+Hmmm they appear to be coffee stains. Uhhh... yeah that checks out, nothing suspicious here. Hey, don't lick that. 
+[[Return->Coffee shop]] or [[Leave the coffee shop->Explore]]
 
 
 :: Depression ending {"position":"1850,2400","size":"100,100"}
-Welp, I tried. And I lowkey got grilled by a cornball scammer. I got scammed.
+Welp, you tried... and got mixed by a cornball scammer. But hey, at least you'll have my disembodied voice to keep you company in your poverty-ridden life.
 
 
 The Depressing End.
@@ -161,17 +174,19 @@ window.sendDataToGoogle()
 
 
 :: Detective Room {"position":"1800,1200","size":"100,100"}
-"Well, I'll call you back later bro, I'm gonna dox this fraud."
+"Well, I'll call you back later bro, I'm gonna get this fraud."
 
-Well, judging by the email, this person seems to be Fr{{{*}}}nch, he uses Pomme which derives from the Fr{{{*}}}nch word for apple. The email also smelled of fries so lowkey I think its safe to say I need to travel to Fr{{{*}}}nce. I know there is only like one real city in Fr{{{*}}}nce which is just Paris. So lowkenuinely this scammer is prolly somewhere in there. 
+Well, judging by the email, this person seems to be Fr{{{*}}}nch, he uses Pomme which derives from the Fr{{{*}}}nch word for apple. The email also smelled of fries so lowkey I think its safe to say I need to travel to Fr{{{*}}}nce. I know there is only like one real city in Fr{{{*}}}nce which is just P{{{*}}}ris. So lowkenuinely this scammer is prolly somewhere in there. 
 
-(align:"=><=")[[Look at the map of Paris that's conveniently on the wall before you-> Map Room]]
+(align:"=><=")[[Look at the map of P{{{*}}}ris that's conveniently on the wall before you-> Map Room]]
 
 
 :: Eiffel Tower {"position":"2375,1375","size":"100,100"}
-The famous Eiffel Tower, surely I will find something here, everybody knows this place so he prolly went here. ohhh a dark and mysterious alley do I enter it? [[Enter the alley ->Alley]] 
+The famous Eiffel Tower, surely you'll find something here, everybody knows this place so he prolly went here. Oooh a dark and mysterious alley! 
+[[Enter the alley ->Alley]] 
 
-Maybe I can find something in the tower? [[Head to the Tower->The tower]]
+Or maybe you can find something in the tower? 
+[[Head to the Tower->The tower]]
 
 (if:$investigationCount is 0)[
 (set: $firstLocation to "EiffelTower")
@@ -184,48 +199,44 @@ Maybe I can find something in the tower? [[Head to the Tower->The tower]]
 
 
 :: Explore {"position":"2800,900","size":"100,100"}
-Ohh look at that, a nice little coffee shop. I wonder if they have some info on this guy or maybe I can go to a goofy historic building in this village. [[Head to the coffee shop->Coffee shop]] or [[Go to a historic building->hist building]]
+Ohh look at that, a nice little coffee shop. Maybe they have some info on this guy or maybe you can go to a goofy historic building in this village. [[Head to the coffee shop->Coffee shop]] or [[Go to a historic building->hist building]]
 
 
 :: Get mad {"position":"1200,1300","size":"100,100"}
-(text-style:"bold","wavy-underline","shadow","rumble")[WHY DID YOU GET THE MONEY? WHY WAS I LEFT OUT OF THE WILL?? 
+(text-style:"bold","wavy-underline","shadow","rumble")[{"}WHY DID YOU GET THE MONEY? WHY WAS I LEFT OUT OF THE WILL?? {"}
 ]
 (align:"=><=")[[Continue->Lil Bro Scammed]]
 
 
 :: Hint {"position":"2700,2500","size":"100,100"}
-The scammer is closer than you think. 
+Guy: "The scammer is closer than you think."
 
-Well yeah You are him right?
+You: "It's you ain't it?"
 
-Wait what?
+Guy: "Wait what?"
 
-Yeah and I just scammed you. Wait how...
+You: "Chicken butt"
 
-I gave you 4 shmeckles, you just didnt count it.
-
-That cant be! 1,2,3,4-
-WHAT
-
-yeah I lowkey cooked you bro, I slimed you. Scammer get scammed. Now you gotta give me all the granny money back. 
-
-Thats not how this works.
-
-Yeah it is.
-
-NooOOOooOooooo..... (Pomme melts and his bag he had on his back contains all your money)
-
-BINGOOOOOOOOOOO
+The dude EXPLODES. I didn't realize you went to Hogwarts dude. Wow that was messed up I wish the art budget hadn't ran out because that was wild. Anyways, it looks like he had all the cash on him, that wasn't smart on multiple levels.
 
 The Wicked End.
 
+(set: $playerName to "Harry")
+(set: $score to 0)
+(set: $ending to "Wicked")
+
+<script>
+window.sendDataToGoogle()
+</script>
+
 
 :: Inspect venus {"position":"3300,400","size":"100,100"}
-Hmmmm not sure I can really touch the statue, I don't feel like getting kicked out but maybe theres a pattern? Nah Im trippin there aint nothin here. [[Go to paintings->paintings]]
+Hmmmm not sure you can touch the statue, I don't feel like you'd enjoy getting kicked out but maybe theres a pattern? Nah you're trippin there aint nothin here. [[Go to paintings->paintings]]
 
 
 :: La Sainte-Chapelle {"position":"1500,2025","size":"100,100"}
-Ahh no, there's no one here. MY MONEY IS GONEEEEE
+You look around, search high and low, close and far, to and fro. But alas, the scammer is gone. And at this point, probably escaped with the stolen inheritance.
+
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
@@ -253,7 +264,8 @@ Hmmm I wonder where this loser could be... Wait, what's that?
 
 
 :: Mont Saint-Michel {"position":"1750,2050","size":"100,100"}
-Ahh no, there's no one here. MY MONEY IS GONEEEEE
+You look around, search high and low, close and far, to and fro. But alas, the scammer is gone. And at this point, probably escaped with the stolen inheritance.
+
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
@@ -263,7 +275,7 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 :: Montmatre {"position":"2600,900","size":"100,100"}
 Ahh Montmatre... 
 
-The building known for it's artistic heritage or whatever that goofy ahh phrase means. Maybe I can find something here otherwise I am straight cooked. [[Explore the Montmarte->Explore]]
+The building known for it's artistic heritage or whatever. Maybe you can find something here. [[Explore the Montmarte->Explore]]
 
 (if:$investigationCount is 0)[
 (set: $firstLocation to "Montmatre")
@@ -276,27 +288,38 @@ The building known for it's artistic heritage or whatever that goofy ahh phrase 
 
 
 :: Muffin line {"position":"2925,1625","size":"100,100"}
-No I dont, I am Fr{{{*}}}nch. But here is a couple of breadcrumbs. [[Return back to the Eiffel Tower->Eiffel Tower]]
+"No I dont, I am Fr{{{*}}}nch." He throws some breadcrumbs on the floor and then flies away like a pidgeon.
+
+You need to get out of this country.
+
+[[Return back to the Eiffel Tower->Eiffel Tower]]
 
 
 :: Museum {"position":"2900,400","size":"100,100"}
-Hmm. seems like I gotta pay for a ticket here. Minus 10 buckaroos. Apparently I only got a certain amount of time. I better be quick about this. 
+Hmm. seems like I gotta pay for a ticket here. Minus 10 buckaroos. You better be quick about this. 
+
+(set: $money to $money - 10)
+
 [[Check paintings->paintings]] [[Check scultpures->Sculptures]] [[Check outside->Outside Museum]]
 
 
+
+
 :: No {"position":"2725,1825","size":"100,100"}
-Maybe I should just leave the alley, lowkey prolly not the safest idea i have had. [[Leave the alley->Eiffel Tower]]
+Maybe you should just leave the alley, prolly not the safest idea. I heard people die in here for fun.
+[[Leave the alley->Eiffel Tower]]
 
 
-:: Nothing {"position":"3000,800","size":"100,100"}
-Dang theres nothing in here, lowkey dont know what I was expecting with that lol. [[Return to Sign-> Sign]]
+:: Nothing {"position":"2900,750","size":"100,100"}
+Dang, nothing. [[Return to Sign-> Sign]]
 
 
 :: Notre-Dame {"position":"3200,1200","size":"100,100"}
 (text-style:"shudder")[Your IP address is $userIP]
 
-Oh nice, the overcooked cathedral! This chud ain't a man of faith, but I bet they still visit this spot to pray to John Riot Games for that 10 RP back. I'm a totally holy person, so going to Notre Dame isn't necessary for me, and the tourists are goofy-lookin' anyway. 
-But out of absolutely nowhere, you hear some lowkey gas singing about life insurance. 
+I learned who to doxx people from Xbox Live, anyways that has nothing to do with what you're doing. Let's keep going.
+
+You're at the overcooked cathedral! This chud ain't a man of faith, but I bet they still visit this spot to pray to John Riot Games for that 10 RP back. I'm a totally holy person, so going to Notre Dame isn't necessary for me, and the tourists are goofy-lookin' anyway. You could prolly use some divine intervention tho ngl, over here scrounging around for your grandma's inheritence. But out of absolutely nowhere, you hear some lowkey gas singing about life insurance. 
 
 (align:"=><=")[[[Maybe this place is worth looking into after all->inside]]]
 
@@ -311,7 +334,7 @@ But out of absolutely nowhere, you hear some lowkey gas singing about life insur
 
 
 :: Opening 1 {"position":"600,1200","size":"100,100"}
-You wake up to a distressed phone call from the life insurance company to find out that your 'Ma Cristo is dead. YAY, free money $$$! 
+You wake up to a distressed phone call from the life insurance company to find out that your 'Ma Cristo is dead. Like, WAY dead. YAY, inheritance money $$$! 
 
 (align:"=><=")[[Lessgooo->Opening 2]]
 
@@ -324,17 +347,18 @@ You wake up to a distressed phone call from the life insurance company to find o
 
 
 :: Opening 2 {"position":"800,1200","size":"100,100"}
-You find out that only your younger sibling had been left in the will, why the heck didn't I get the money??? 
+You find out that only your younger sibling had been left in the will, why the heck didn't you get the money??? 
 
 (align:"=><=")[[Call your sibling]]
 
 
 :: Outside Museum {"position":"3000,600","size":"100,100"}
-Woah whats this hug pyramid, maybe there is something in the water? [[Check the water->Nothing]]
+Woah, what's this huge pyramid? Maybe there's something in the water? [[Check the water->Nothing]]
 
 
 :: Palace of Versailles {"position":"1950,2050","size":"100,100"}
-Ahh no, there's no one here. MY MONEY IS GONEEEEE
+You look around, search high and low, close and far, to and fro. But alas, the scammer is gone. And at this point, probably escaped with the stolen inheritance.
+
 [[You've lost all your money and head home depressed->Depression ending]]
 
 
@@ -342,116 +366,138 @@ Ahh no, there's no one here. MY MONEY IS GONEEEEE
 
 
 :: Sculptures {"position":"3100,400","size":"100,100"}
-Woahhh, the Venus de Milo. Isn't this like the goddess of love. Lowkey fiah. Maybe there's a clue I can find here...[[Inspect statue->Inspect venus]] or [[blow this popsicle stand and go to paintings->paintings]]
+Woahhh, the Venus de Milo. Isn't this like the goddess of love...? Anyways, no time fo dat. Maybe there's a clue you can find here...[[Inspect statue->Inspect venus]] or [[blow this popsicle stand and go to paintings->paintings]]
 
 
 :: The clue {"position":"3400,600","size":"100,100"}
-AHHHAA, I KNEW IT. SHE WAS STARING AT THIS CONVENIENTLY PLACED APPLE ORIGAMI. It says,"I see you have found the apple of her eye!..." This guy seriously needs a job. Well I guess this would be his job but like le bro bro, where is the A material. Anyways,"Now you should think, I am where many have perished and where many have not escaped, I am not over yet under and anyone inside me has sealed their fate." Why is this guy acting like he IS the place where he is hiding. BRO IS NOT THE RIDDLER. [[Return back to base -> Map Room]]
+An apple origami with a note on it?  It says, "I see you have found the apple of her eye!" ...This guy seriously needs a job. Well I guess this would be his job but like le bro, where is the A-grade material? Anyways.
+"Now you should think, I am where many have perished and where many have not escaped, I am not over yet under and anyone inside me has sealed their fate." 
+Oh I think I know this one, the horse's name was Friday!
+ [[Screw this joint, let's go back -> Map Room]]
 
 
-:: The tower {"position":"2550,1500","size":"100,100"}
-Woah this thing is huge, wait is that a piece of paper in the metal bars? [[Climb it the goofy ahh tower->climb]] maybe I should call for help? [[Call for help from a bystander->Bystander call]]
+:: The tower {"position":"2575,1500","size":"100,100"}
+Woah this thing is huge, wait is that a piece of paper in the metal bars? 
+[[Free climb time->climb]] 
+
+Or maybe you should call for help? 
+[[Call for help from a bystander->Bystander call]]
 
 
 :: Under benches {"position":"3800,1100","size":"100,100"}
-Hmmm nothing under these benches, other than someones crusty shoes. Why would someone leave these here. Like cmon now, what're we doing. Lock in twinjamin, not in church leaving the old, one, two, buckle my shoes ahh. [[Look at the alter->Alter]]
+Hmmm nothing under these benches, other than someone's crusty shoes. Why would someone leave these here. Like cmon now, what're we doing. Lock in twinjamin, not in church leaving the old, one, two, buckle my shoes ahh. 
+
+Okay, I'm done. Sorry.
+
+[[Look at the altar->Alter]]
 
 
 :: Yes {"position":"2725,1725","size":"100,100"}
-Hey, I wanted to ask....[[Do you know the muffin man?->Muffin line]] or [[Do you know where i can find a scammer->scammer line]]
+"Hey, I wanted to ask...."
+[["do you know the muffin man?"->Muffin line]] or [["do you know where i can find a scammer"->scammer line]]
+
+...Why is that an option?
 
 
-:: attack {"position":"2400,2500","size":"100,100"}
-RAHHHHH YOU TOOK MY GRANNY MONEY AND NOW YOULL PAY. 
-
-(Pomme trips you and you fall flat on your face. He then runs into a tunnel[[Get up and follow him->down the tunnel]])
+:: attack {"position":"2400,2600","size":"100,100"}
+You deck him square in the jaw and he hit the jets again. Also he tripped you before he started running again, I  should mention that too.
+[[Get up and follow him->down the tunnel]])
 
 
 :: breadcrumbs {"position":"3200,800","size":"100,100"}
-Yeahhhh i lowkey, highkey, middle key don't know what I was expecting to gather from these bread crumbs but they fancy lookin at least. [[Return->Coffee shop]] or [[Return back to explore->Explore]]
+Yeahhhh I lowkey, highkey, middle key, chocolate moose, rubber goose, don't know what your OBTUSE head was expecting to gather from bread crumbs... At least they fancy lookin. [[Return->Coffee shop]] or [[Leave coffee shop->Explore]]
 
 
 :: caught a mouse {"position":"2300,2400","size":"100,100"}
-GOTCHA. wait, bruh.
+Guy: "Wassup?"
 
-its just a mouse. Ofc it is. 
+You: "Yo"
 
-I see you have found me. 
+Guy: "I assume you want your money back?"
 
-AHA, wait Im sorry who are you.
+You: "Oh are you the scammer?"
 
-I....am the dragon warrior. 
+Scammer: "Yeah, I'm the scammer"
 
-What are you talking about.
+You: "Pomme?"
 
-Sorry wrong movie, I am Pomme, the great scammer. 
+Pomme: "Yeah, I'm Pomme"
 
-Im just gonna ignore what you said before and attack you if that's alright. 
+You: "Which one do I call you?"
 
-Well wait, What if i persuade you.....
+Pommer: "Maybe a combo of the two? Doesn't matter"
 
 [[Attack him->attack]] or [[Hear this goofball out->hear out]]
 
 
 :: chase {"position":"2300,2200","size":"100,100"}
-ahhhheeeee ahhheeeeee. I can't breathe, I really shouldn't have skipped gym class all those years ago, I knew it would catch up to me. nahhhh, I don't regret it but still jeez. AHA. I've caught you.....[[Who have you caught?->caught a mouse]]
+You really shouldn't have skipped gym class back then. It's getting hard to spectate this, you're breathing harder than a sumo wrestler in a packed subway car. Good thing for you, the figure you were chasing doesn't seem to be doing much better.
+[[Who have you caught?->caught a mouse]]
 
 
 :: climb {"position":"2725,1425","size":"100,100"}
-Cmonnnnnn I can almost reach it, Im so closeeeeeeeeee. Maybe If I had something I could hit the paper and knock it down. What could I use tho. [[Use Baguette-> get clue]]
+Oh yeah you got that, light work. Oop, no you're slowing down. Nah wait you're good. No? Yea- ah no. Yeah you're stuck just out of reach of the note. If only you had something to reach it with.
+
+[[Use Baguette-> get clue]]
+Wait, where'd you get a baguette from?
 
 
-:: continue {"position":"3150,1700","size":"100,100"}
-Nope, Never heard of em. [[Return to Eiffel Tower ->Eiffel Tower]]
+:: continue {"position":"3125,1700","size":"100,100"}
+"Nope, Never heard of em."
+[[Return to Eiffel Tower ->Eiffel Tower]]
 
 
 :: declined offer {"position":"2900,2500","size":"100,100"}
-Alright well if you say so. I stole your granny money already anyhow MWHAHAAHAH.
+"Alright well if you say so. I stole your granny money already anyhow MWHAHAAHAH."
 
-Hey get back here!
+Oh hey this guy's the scammer. Cool. Too bad he took off running...
 
-[[chase down this nutcase->caught a mouse]]
+[[Chase down this nutcase->caught a mouse]]
 
 
 :: dont talk {"position":"2500,2300","size":"100,100"}
-You see the figure again run past you and decide its high time to chase it down. [[Chase the fraud down->caught a mouse]]
+The guy runs past you, pushing you to the ground. You always seem to have this effect on people. Gotta work on that.
+
+[[Chase the fraud down->caught a mouse]]
 
 
 :: down the tunnel {"position":"2700,2625","size":"100,100"}
-Your cornered bub. I've got you now. 
+You managed to chase him down to a dead end.
 
-You havent got jack
+You: "You're cornered bub. I've got you now."
 
-Well no, that's not my name.
+Pommer: "You havent got jack."
 
-Bruh, you know what I mean.
+You: "My name ain't jack, bro."
 
-Nope, not sure I really do.
+Pommer: "And I ain't your bro, Jack."
 
-UGhhhh, Im not giving the granny money to you is my point.
+You: "NOT MY NAME!"
 
-What if we make a bet.
+Pommer: "UGhhhh, Im not giving the granny money to you is my point."
 
-Im all for gambling.
+You: "What if we make a bet?"
 
-Alright, Ima flip a coin.
+Pommer: "Im all for gambling."
 
-Sure.
+You: "Alright, Ima flip a coin."
 
-Alright ready?? Heads I win Tails you lose.
+Pommer: "Sure."
 
-Okay.
+You: "Alright. Heads I win Tails you lose."
 
-Tails
-YOU LOSE
+Pommer: "Okay... WAIT"
 
-NOOOOOOOO WHYYY, well here you go.
+The coin lands on tails.
 
-Thanks bro, much obliged. 
+You: "YOU LOSE"
 
-Wait how was that fair???
+Pommer: "How was that fair!?"
 
-It wasnt, scammer get scammed MWHAHAHAHA
+You: "It wasn't"
+
+Pommer then starts crying uncontrollably. Like I'm talking essentially nuclear levels of crying. The wah-mbulance couldn't dream of saving this guy. Let's just grab that sack of cash he dropped and head out, you can't be caught doing this kind of stuff to people.
+
 The Gambler End.
 
 (set: $playerName to "Vinnie")
@@ -464,11 +510,17 @@ window.sendDataToGoogle()
 
 
 :: hear out {"position":"2200,2525","size":"100,100"}
-What if I told you we can make money together. 
-Bro you literally stole my granny money. 
-Truth nuke, Buuuuuuut Ill share, we can go 15-85%.
+Pommer: "So before anything else, what if I told you we can make money together?"
 
-[[Attack him->attack]]
+You: "What?"
+
+Pommer: "We could be partners, we'd have eachother's backs"
+
+You: "Bro you literally stole my granny's life ensurance money."
+
+Pommer: "Buuuuuuut Ill share, we can go 15-85%. Whaddya say?"
+
+[["Let's keep it 100"->attack]]
 
 
 :: hist building {"position":"3000,1000","size":"100,100"}
@@ -479,41 +531,45 @@ worth it? [[Pay 20 dollars, not those gross euros -> Mont Clue]] or [[Leave->Exp
 
 
 :: inside {"position":"3400,1200","size":"100,100"}
-Woahhh its so peak in here. I wonder if I can here myself echo. [[Yell at the top of your lungs->yelled]] or [[don't yell add visit the alter->Alter]]
+Woahhh its so peak in here. You wonder if you can hear yourself echo. 
+[[Yell at the top of your lungs->yelled]] or [[Don't yell and visit the altar->Alter]]
 
 
 :: paid {"position":"2950,1500","size":"100,100"}
-If you search around the area, you can find a useful tool to get the paper out.
-[[Return to the main area->Eiffel Tower]]
+...
+
+I CANNOT describe, how that guy ran off with the upmost precision, determination, and speed. Maybe superheros are real because the Flash just scammed the hell out of you.
+
+[[Cry a lil and go back->Eiffel Tower]]
 
 (set: $money to $money - 5)
 
 
-:: paintings {"position":"3200,600","size":"100,100"}
-Ah yes of course, the Mona Lisa. I dont like the way she staring at me. Lowkey a creep (radiohead moment) but maybe she is hiding something. I wonder where she is looking...[[Turn to look at what she is looking at->The clue]]
+:: paintings {"position":"3200,575","size":"100,100"}
+Ah yes of course, the Mona Lisa. You don't like the way she staring at you, she's lowkey creeping looking all fixated like that. I wonder where she is looking...[[Turn to look at what she is looking at->The clue]]
 
 
 :: scammer line {"position":"2925,1750","size":"100,100"}
-Yeah I dont really uhhhh, not really sure to be honest, are you talking about me knowing a guy who knows a guy who knows a second cousin who has a cross cousin named Pomme?
-[[yes!->continue]]
+"Yeah I dont really uhhhh, not really sure to be honest, are you talking about a guy who knows a guy who knows a second cousin who has a cross cousin named Pomme?"
+[["Yes!"->continue]]
 
 
 :: talk {"position":"2700,2300","size":"100,100"}
-Well, if you pay me 5 shmeckles, I will tell you a secret that you might find helpful. 
+"If you pay me 5 shmeckles, I will tell you a secret that you might find helpful."
 
 [[Pay 5 shmeckles (15 dollars))->Hint]] or [[decline->declined offer]]
 
 
-
 :: tunnel {"position":"2475,2150","size":"100,100"}
-ahhh I don't like this, somethings telling me I am being watched in here. Why do these scenarios always feel worse than the horror movies. Like, I know I shouldn't go deeper, logically this is stupid, but just like the movies I gotta find out because why not. AHHHH.
+Ahhh I don't like this, somethings telling me to tell you that you're being watched in here. Watched by THAT MONSTER AROUND THE CORNER!
 
-
-Oh its just a guy. should I talk to him?[[yes->talk]] or [[no->dont talk]]
+Oh its just a guy. Wanna talk to him?
+[[yes->talk]] or [[no->dont talk]]
 
 
 :: yelled {"position":"3600,1100","size":"100,100"}
-RAHHHHHHHHHHHHHHHHH-----RAHHHH-RAHH-RAH-rahhhhhhhhh. That was definitely worth. Anyhow now that I am fulfilled where should I look....[[look at alter->Alter]] or [[check under benches->Under benches]]
+RAHHHHHHHHHHHHHHHHH-----RAHHHH-RAHH-RAH-rahhhhhhhhh. That was definitely worth. Anyhow now that you got that out of your system, where do you wanna look?
+[[Look at altar->Alter]] or [[Check under benches->Under benches]]
 
 
 :: StoryScript [script]
