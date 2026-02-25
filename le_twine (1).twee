@@ -70,7 +70,7 @@ Hmmmm, it says the worlds most visited art museum. Would a scammer really come h
 
 Dear person,
 
-Your 'Ma Cristo is dead. Lowkey a tragedy. But you got moneys, now I got your money. There's nothing you can do about it. Unless you like lowkey revive your grandma but like highkey not happening so L + ratio. Anyways, Im gona buy a ton of stuff and League of Legends skins and Clair Obscur and unlock every League of Legends champion and like open a ton of Hextech chests its not even funny lol. 
+Your 'Ma Cristo is dead. Lowkey a tragedy. But you got moneys, now I got your money. There's nothing you can do about it. Unless you like lowkey revive your grandma but like highkey not happening so L + ratio. Anyways, Im gonna buy a ton of stuff and League of Legends skins and Clair Obscur and unlock every League of Legends champion and like open a ton of Hextech chests its not even funny lol. 
 
 see ya later alligator,
 
@@ -303,8 +303,6 @@ Hmm. seems like I gotta pay for a ticket here. Minus 10 buckaroos. You better be
 [[Check paintings->paintings]] [[Check scultpures->Sculptures]] [[Check outside->Outside Museum]]
 
 
-
-
 :: No {"position":"2725,1825","size":"100,100"}
 Maybe you should just leave the alley, prolly not the safest idea. I heard people die in here for fun.
 [[Leave the alley->Eiffel Tower]]
@@ -401,7 +399,7 @@ Okay, I'm done. Sorry.
 
 :: attack {"position":"2400,2600","size":"100,100"}
 You deck him square in the jaw and he hit the jets again. Also he tripped you before he started running again, I  should mention that too.
-[[Get up and follow him->down the tunnel]])
+[[Get up and follow him->down the tunnel]]
 
 
 :: breadcrumbs {"position":"3200,800","size":"100,100"}
